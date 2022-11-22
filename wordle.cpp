@@ -7,11 +7,8 @@
 #include "wordle.h"
 #include "dict-eng.h"
 using namespace std;
-
-
 // Add prototypes of helper functions here
 void wordSolve(const std::set<std::string>& dict, std::string floating, size_t index, std::set<std::string>& correctSet, std::string wordTemp);
-
 // Definition of primary wordle function
 std::set<std::string> wordle(
     const std::string& in,
@@ -23,7 +20,6 @@ std::set<std::string> wordle(
     wordSolve(dict, floating, 0, wordAnswers, in);
     return wordAnswers;
 }
-
 // Define any helper functions here
 void wordSolve(const std::set<std::string>& dict , std::string floating, size_t index, std::set<std::string>& correctSet, std::string wordTemp){
     int dashCount = 0;
